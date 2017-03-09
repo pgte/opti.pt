@@ -6,7 +6,7 @@ const pubsub = require('@google-cloud/pubsub')({
 const topic = pubsub.topic('contact-request')
 
 module.exports = function (req, reply) {
-  topic.publish({ data: JSON.stringify(req.payload) }, function (err) {
+  topic.publish(req.payload, function (err) {
     if (err) {
       console.error(err)
       reply(err)
