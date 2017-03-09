@@ -1,0 +1,23 @@
+{
+  "name": "opti.pt",
+  "version": "1.0.0",
+  "description": "OPTi.pt app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgte/opti.pt.git"
+  },
+  "author": "OPTHS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pgte/opti.pt/issues"
+  },
+  "homepage": "https://github.com/pgte/opti.pt#readme",
+  "dependencies": {
+    "@google-cloud/pubsub": "^0.8.2",
+    "hapi": "^16.1.0"
+  }
+}
