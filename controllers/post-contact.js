@@ -9,7 +9,7 @@ module.exports = function (req, reply) {
   const payload = req.payload
   console.log(payload)
   topic.publish({
-    data: JSON.stringify(req.payload)
+    data: req.payload
   }, function (err) {
     if (err) {
       console.error(err)
