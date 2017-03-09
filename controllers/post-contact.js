@@ -1,6 +1,8 @@
 'use strict'
 
-const pubsub = require('@google-cloud/pubsub')();
+const pubsub = require('@google-cloud/pubsub')({
+  projectId: 'modified-fabric-160310'
+});
 const topic = pubsub.topic('contact-request')
 
 module.exports = function (req, reply) {
