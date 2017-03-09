@@ -10,6 +10,7 @@ module.exports = function (req, reply) {
     data: JSON.stringify(req.payload)
   }, function (err) {
     if (err) {
+      console.error(err)
       reply(err)
     } else {
       reply('OK')
