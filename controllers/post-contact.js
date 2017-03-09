@@ -8,9 +8,7 @@ const topic = pubsub.topic('contact-request')
 module.exports = function (req, reply) {
   const payload = req.payload
   console.log(payload)
-  topic.publish({
-    data: req.payload
-  }, function (err) {
+  topic.publish(payload, function (err) {
     if (err) {
       console.error(err)
       reply(err)
