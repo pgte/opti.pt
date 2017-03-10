@@ -12,7 +12,8 @@ require('./routes')(server)
 const TTL = 10 * 365 * 24 * 60 * 60 * 1000
 
 server.state('affiliate', {
-  // isHttpOnly: true,
+  isHttpOnly: false,
+  isSecure: false,
   encoding: 'none',
   ttl: TTL,
   path: '/',
