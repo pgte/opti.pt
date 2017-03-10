@@ -15,7 +15,8 @@ server.state('affiliate', {
   // isHttpOnly: true,
   encoding: 'none',
   ttl: TTL,
-  path: '/'
+  path: '/',
+  domain: 'opti.pt'
 })
 
 server.start((err) => {
