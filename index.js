@@ -9,6 +9,15 @@ server.connection({ port });
 
 require('./routes')(server)
 
+const TTL = 10 * 365 * 24 * 60 * 60 * 1000
+
+server.state('affiliate', {
+  // isHttpOnly: true,
+  encoding: 'none',
+  ttl: TTL,
+  path: '/'
+})
+
 server.start((err) => {
 
     if (err) {
