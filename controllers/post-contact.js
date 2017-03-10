@@ -7,7 +7,7 @@ const topic = pubsub.topic('contact-request')
 
 module.exports = function (req, reply) {
   const message = Object.assign({
-    affiliate: req.state('affiliate')
+    affiliate: req.state && req.state.affiliate
   }, req.payload)
   topic.publish(JSON.stringify(message), function (err) {
     if (err) {
