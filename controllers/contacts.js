@@ -18,7 +18,6 @@ const AFFILIATES = {
 }
 
 module.exports = function (req, reply) {
-  console.log(reply.state('affiliate'))
   const affiliate = req.state && req.state.affiliate || 'default'
   reply(AFFILIATES[affiliate])
 }
