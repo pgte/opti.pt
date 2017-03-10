@@ -17,10 +17,7 @@ server.state('affiliate', {
   encoding: 'none',
   ttl: TTL,
   path: '/',
-  domain: 'opti.pt',
-  autoValue: function (req, next) {
-    next(null, req.state && req.state.affiliate)
-  }
+  domain: 'opti.pt'
 })
 
 server.start((err) => {
