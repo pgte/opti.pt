@@ -19,7 +19,7 @@ server.state('affiliate', {
   path: '/',
   domain: 'opti.pt',
   autoValue: function (req, next) {
-    next(null, req.state('affiliate'))
+    next(null, req.state && req.state.affiliate)
   }
 })
 
