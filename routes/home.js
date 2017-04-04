@@ -6,7 +6,7 @@ module.exports = function (server) {
     path: '/',
     handler: function (req, reply) {
       if ((req.info && req.info.hostname || '').indexOf('optihousing.com') >= 0) {
-        reply.redirect('https://optihousing.com/en')
+        reply.redirect('http://optihousing.com/en')
       } else {
         reply.redirect('/index.html')
       }
