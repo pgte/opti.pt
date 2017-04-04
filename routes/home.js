@@ -5,7 +5,7 @@ module.exports = function (server) {
     method: 'GET',
     path: '/',
     handler: function (req, reply) {
-      if ((req.url.hostname || '').indexOf('optihousing.com') >= 0) {
+      if ((req.info && req.info.hostname || '').indexOf('optihousing.com') >= 0) {
         reply.redirect('https://optihousing.com/en')
       } else {
         reply.redirect('/index.html')
