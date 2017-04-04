@@ -1,5 +1,5 @@
 'use strict'
 
 module.exports = function (req, reply) {
-  reply.redirect('https://opti.pt').state('affiliate', 'madeira')
+  reply.redirect('https://opti.pt/madeira.html').state('affiliate', 'madeira')
 }
