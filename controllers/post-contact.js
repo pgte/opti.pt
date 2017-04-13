@@ -6,8 +6,12 @@ const pubsub = require('@google-cloud/pubsub')({
 const topic = pubsub.topic('contact-request')
 
 module.exports = function (req, reply) {
+  let affiliate = req.state && req.state.affiliate
+  if (Array.isArray(affiliate)) {
+    affiliate = affiliate[0]
+  }
   const message = Object.assign({
-    affiliate: req.state && req.state.affiliate
+    affiliate: affiliate
   }, req.payload)
   topic.publish(JSON.stringify(message), function (err) {
     if (err) {
