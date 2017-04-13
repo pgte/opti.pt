@@ -19,6 +19,9 @@ const AFFILIATES = {
 
 module.exports = function (req, reply) {
   const affiliate = req.state && req.state.affiliate || 'default'
+  if (Array.isArray(affiliate)) {
+    affiliate = affiliate[0]
+  }
   console.log('affiliate:', affiliate)
   reply(AFFILIATES[affiliate])
 }
