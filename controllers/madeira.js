@@ -1,5 +1,13 @@
 'use strict'
 
 module.exports = function (req, reply) {
-  reply.redirect('https://opti.pt/madeira.html').state('affiliate', 'madeira')
+  // const url =
+  // const redirectTo = req.
+  const redirectTo =
+    req.connection.info.protocol +
+    '://' +
+    req.info.host +
+    req.url.path +
+    '.html';
+  reply.redirect(redirectTo).state('affiliate', 'madeira')
 }
