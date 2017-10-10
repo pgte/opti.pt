@@ -1,7 +1,7 @@
 'use strict'
 
 const DEFAULT_CONTACTS = {
-  phone: '910 353 088',
+  phone: '969 730 910',
   address: [
     'Rua da Conceição, 90',
     '9050-026 Funchal'
